@@ -1,34 +1,29 @@
+
 <!DOCTYPE html>
-<html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-  </head>
-<body style="background-color:black;">
-<font color="#ffffff">
+<html lang="en">
 <head>
-<title>VULTURES1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <title>VULTURES1</title>
+    <style>
+        #playlist{
+            list-style: none;
+        }
+        #playlist li a{
+            color:white;
+            text-decoration: none;
+        }
+        #playlist .current-song a{
+            color:red;
+        }
+    </style>
 </head>
 <body>
-<br><hr><br>
-<img src="front-cover.png"
-  width="250"
-  height="250" />
-<h1 style+"font: white; font-size 19 px; font-family: arial-white;">VULTURES1</h1>
-<h2 style+"font: white; font-size 15 px; font-family: arial-white">KANYE WEST, TY DOLLA $IGN</h2>
-<style>
-#playlist{
-List-style: none;
-{
-#playlist li a{
-color:white
-text-decoration: none;
-}
-</style>
-<audio src="" controls id="audioPlayer">
-<ul id="playlist">
-<li class="current-song"><a href="01-stars.mp3">Stars</a></li>
+    <p>Demo Music From <a href="http://incompetech.com">incompetech.com</a></p>
+    <audio src="" controls id="audioPlayer">
+        Sorry, your browser doesn't support html5!
+    </audio>
+    <ul id="playlist">
+       <li class="current-song"><a href="01-stars.mp3">Stars</a></li>
 <li><a href="02-keys-to-my-life.mp3">Keys to My Life</a></li>
 <li><a href="03-paid.mp3">Paid</a></li>
 <li><a href="04-talking.mp3">Talking</a></li>
@@ -44,28 +39,12 @@ text-decoration: none;
 <li><a href="14-good-(don't-die).mp3">Good (Don't Die)</a></li>
 <li><a href="15-problematic.mp3">Problematic</a></li>
 <li><a href="16-king.mp3">King</a></li>
-</ul>
-<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script>
-Audios player ();
-  function audiplayer(){
-    var currentSong = 0;
-    $("#audioPlayer")[0].src = $(#playlist li a")[0];
-    $("audioPlayer")[0].play();
-    $("playlist li a").click(function(e){
-    $("playlist li").removeClass("current-song");
-    currentSong = $(this).parent().index();
-    $(this).parent().addClass("current-song");
-  });
-  $(#audioPlayer")[0].addEventListener("ended", function(){
-    currentSong++;
-  if(currentSong == $("playlist li a").length)
-    currentSong = 0;
-  $("#playlist li").removeClass("current-song);
-  $("playlist li:eq("+currentSong+")").addClass("current-song);
-  $("#audioPlayer")[0].src = $("playlist li a")[currentSong].href;
-  $("#audioPlayer")[0].play();
-  });                                
-</script>
+    </ul>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="audioPlayer.js"></script>
+    <script>
+        // loads the audio player
+        audioPlayer();
+    </script>
 </body>
 </html>
