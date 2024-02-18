@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <html lang="en">
 <body style="background-color:black;">
 <font color="#ffffff">
 <head>
@@ -42,10 +43,26 @@ text-decoration: none;
 <li><a href="16-king.mp3">King</a></li>
 </ul>
 <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-<script> src="audio player.js"></script>
 <script>
-//loads the audio players
 Audios player ();
+  function audiplayer(){
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $(#playlist li a")[0];
+    $("audioPlayer")[0].play();
+    $("playlist li").removeClass("current-song");
+    currentSong = $(this).parent().index();
+    $(this).parent().addClass("current-song");
+  });
+
+  $(#audioPlayer")[0].addEventListener("ended", function(){
+    currentSong++;
+  if(currentSong == $("playlist li a").length)
+    currentSong = 0;
+  $("#playlist li").removeClass("current-song);
+  $("playlist li:eq("+currentSong+")").addClass("current-song);
+  $("#audioPlayer")[0].src = $("playlist li a")[currentSong].href;
+  $("#audioPlayer")[0].play();
+  });                                
 </script>
 </body>
 </html>
