@@ -22,3 +22,7 @@
             });
         }
         createScriptProcessor(512)
+        var aud = document.getElementById("elem_audio");
+aud.oncanplay = function() {
+    aud.currentTime = 10;
+};
