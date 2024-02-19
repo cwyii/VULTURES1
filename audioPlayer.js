@@ -21,3 +21,4 @@
                 $("#audioPlayer")[0].play();
             });
         }
+        createScriptProcessor(512)
