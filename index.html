@@ -82,5 +82,15 @@ float:center;
         // loads the audio player
         audioPlayer();
     </script>
+  <script>type="text/javascript">
+        var nextVideo = "/Link/To/Next/File.mp3";
+        var audioPlayer = document.getElementById('audio_with_controls');
+        audioPlayer.addEventListener('ended', PlayNext);
+
+        function PlayNext() {
+            audioPlayer.src = nextVideo;
+            audioPlayer.play();
+        }
+  </script>
 </body>
 </html>
