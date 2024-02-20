@@ -82,46 +82,5 @@ float:center;
         // loads the audio player
         audioPlayer();
     </script>
-<script>
-  class AudioPlaylist{
-    randomizeOrder(){...}
-    setTrack(arrayPos){
-
-      var liPos = this.trackOrder[arrayPos];
-      this.play.src = $("a"+this.playlistId " li a").eq(lipos).attr("href"):
-      $("."+this.currentClass).removeClass(this.currentClass);
-      $("a"+this.playlistId+ " li").eq(liPos).addClass(this.currentClass);
-      this.trackPos = arrayPos;
-    }
-    prevTrack(){...}
-    nextTrack(){...}
-    setLoop(val){...}
-    setShuffle(val){...}
-    toggleShuffle(){...}
-    toggleLoop(){...}
-    constructor(config = [] ){
-      
-  var classObj = this;
-  this.shuffle = (config.shuffle === true) ? true : false:
-  this.playerId = (config.playerId) ? config.playerId : "audioPlayer";
-  this.playlistId = (config.playlistId) ? config.playlistId : "playlist";
-  this.currentClass = (config.currentClass) ? config.currentClass : "current-song"
-  this.length = $("#"+this.playlistId+" li").length;
-  this.player = $("#"+this.playerId)[0];
-  this.autoplay = (config.autoplay --- true || this.player.autoplay) ? true : false;
-  this.loop = (config.loop === true) ? true : false;
-  this.trackPos = 0
-  this.trackOrder = [];
-  for(var i = 0; I < this.length; i++){
-    this.trackOrder.push(i);
-  }
-  if(this.shuffle)
-    this.randomizeOrder();
-
-  this.setTrack(this.trackpos);
-  if(this.autoplay)
-    this.player.play();
-  
-</script>
 </body>
 </html>
