@@ -21,3 +21,11 @@
                 $("#audioPlayer")[0].play();
             });
         }
+        
+        const button = document.getElementById('my-button')
+let audio = null
+button.addEventListener('click', () => {
+    audio = new Audio('myAudio.mp3')
+    // Works because `audio` itself was created synchronously during user event handler
+    setTimeout(() => { audio.play() }, 1000)
+})
