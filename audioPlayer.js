@@ -22,7 +22,7 @@
             });
         }
         
-class AudioPlaylist{
+class AudioPlayer{
     randomizeOrder(){...}
     setTrack(arrayPos){
 
