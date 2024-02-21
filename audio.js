@@ -3,11 +3,11 @@ const audio = {
   controls: true,
   source: [
     {
-      src: 'https://testname.com/Track03.mp3',
+      src: '01-stars.mp3',
       type: 'audio/mpeg'
     },
     {
-      src: 'https://testname.com/Track03.ogg',
+      src: '02-keys-to-my-life.mp3',
       type: 'audio/ogg'
     }
   ]
