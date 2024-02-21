@@ -1,21 +1,3 @@
-/*
- * jPlayer Plugin for jQuery JavaScript Library
- * http://www.jplayer.org
- *
- * Copyright (c) 2009 - 2014 Happyworm Ltd
- * Licensed under the MIT license.
- * http://opensource.org/licenses/MIT
- *
- * Author: Mark J Panaghiston
- * Version: 2.9.2
- * Date: 14th December 2014
- */
-
-/* Support for Zepto 1.0 compiled with optional data module.
- * For AMD or NODE/CommonJS support, you will need to manually switch the related 2 lines in the code below.
- * Search terms: "jQuery Switch" and "Zepto Switch"
- */
-
 (function (root, factory) {
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
