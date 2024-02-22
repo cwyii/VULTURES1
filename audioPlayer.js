@@ -1,5 +1,5 @@
 function audioPlayer(){
-            var currentSong = 1;
+            var currentSong = -1;
             $("#audioPlayer")[0].src = $("#playlist li a")[0];
             $("#audioPlayer")[0].play();
             $("#playlist li a").click(function(e){
@@ -13,7 +13,7 @@ function audioPlayer(){
         $("#audioPlayer")[0].addEventListener("ended", function(){
                currentSong++;
                 if(currentSong == $("#playlist li a").length)
-                    currentSong = 1;
+                    currentSong = -1;
                 $("#playlist li").removeClass("current-song");
                 $("#playlist li:eq("+currentSong+")").addClass("current-song");
                 $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
