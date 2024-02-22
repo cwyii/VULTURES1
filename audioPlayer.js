@@ -25,7 +25,7 @@ let playlist = [
         '11-vultures.mp3',
         '12-carinval.mp3',
         '13-beg-forgiveness.mp3',
-        '14-good-(don't-die).mp3',
+        '14-good-dont-die).mp3',
         '15-problematic.mp3',
         '16-king.mp3',
 ];
