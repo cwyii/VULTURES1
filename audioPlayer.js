@@ -1,4 +1,5 @@
         <li class="current-song">
+        });
         
         function audioPlayer(){
             var currentSong = 0;
