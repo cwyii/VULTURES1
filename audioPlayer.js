@@ -10,7 +10,17 @@
                 currentSong = $(this).parent().index();
                 $(this).parent().addClass("current-song");
             });
-
+                
+        $("#audioPlayer")[0].addEventListener("ended", function(){
+               currentSong++;
+                if(currentSong == $("#playlist li a").length)
+                    currentSong = 0;
+                $("#playlist li").removeClass("current-song");
+                $("#playlist li:eq("+currentSong+")").addClass("current-song");
+                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].play();
+            });
+            
 let playlist = [
     '01-stars.mp3',
     '02-key-to-my-life.mp3',
@@ -29,14 +39,4 @@ let playlist = [
         '15-problematic.mp3',
         '16-king.mp3',
 ];
-                
-        $("#audioPlayer")[0].addEventListener("ended", function(){
-               currentSong++;
-                if(currentSong == $("#playlist li a").length)
-                    currentSong = 0;
-                $("#playlist li").removeClass("current-song");
-                $("#playlist li:eq("+currentSong+")").addClass("current-song");
-                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
-                $("#audioPlayer")[0].play();
-            });
         }
