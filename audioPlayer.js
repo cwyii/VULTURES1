@@ -1,31 +1,23 @@
-var _player = document.getElementById("player"),
-    _playlist = document.getElementById("playlist"),
-    _stop = document.getElementById("stop");
-
-function playlistItemClick(clickedElement) {
-    var selected = _playlist.querySelector(".selected");
-    if (selected) {
-        selected.classList.remove("selected");
-    }
-    clickedElement.classList.add("selected");
-
-    _player.src = clickedElement.getAttribute("data-ogg");
-    _player.play();
-}
-
-function playNext() {
-    var selected = _playlist.querySelector("li.selected");
-    if (selected && selected.nextSibling) {
-        playlistItemClick(selected.nextSibling);
-    }
-}
-
-_stop.addEventListener("click", function () {
-    _player.pause();
-});
-_player.addEventListener("ended", playNext);
-_playlist.addEventListener("click", function (e) {
-    if (e.target && e.target.nodeName === "LI") {
-        playlistItemClick(e.target);
-    }
-});​
+function audioPlayer(){
+            var currentSong = 0;
+            $("#audioPlayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0].play();
+            $("#playlist li a").click(function(e){
+               e.preventDefault(); 
+               $("#audioPlayer")[0].src = this;
+               $("#audioPlayer")[0].play();
+               $("#playlist li").removeClass("current-song");
+                currentSong = $(this).parent().index();
+                $(this).parent().addClass("current-song");
+            });
+                
+        $("#audioPlayer")[0].addEventListener("ended", function(){
+               currentSong++;
+                if(currentSong == $("#playlist li a").length)
+                    currentSong = 0;
+                $("#playlist li").removeClass("current-song");
+                $("#playlist li:eq("+currentSong+")").addClass("current-song");
+                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].play();
+            });
+        }
