@@ -107,6 +107,8 @@ float:center;
             e.preventDefault();
             $("#audioPlayer")[0].src = this;
             $("#audioPlayer")[0].play();
+            $("#playlist li").removeClass("current-song");
+              currentSong = $(this).parent().index();
              });
         }
     </script>
