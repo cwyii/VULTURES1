@@ -10,6 +10,7 @@ function audioPlayer(){
                 currentSong = $(this).parent().index();
                 $(this).parent().addClass("current-song");
             });
+        
         $("#audioPlayer")[0].addEventListener("ended", function(){
                currentSong++;
                 if(currentSong == $("#playlist li a").length)
