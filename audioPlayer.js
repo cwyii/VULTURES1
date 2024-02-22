@@ -1,3 +1,6 @@
+$('#songpicker').on('change', function() {
+    change( $(this).val()  );
+})
 function audioPlayer(){
             var currentSong = 0;
             $("#audioPlayer")[0].src = $("#playlist li a")[0];
