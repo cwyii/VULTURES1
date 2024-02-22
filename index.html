@@ -104,8 +104,9 @@ float:center;
           [0];
           $("#playlist li a").click(function(e){
             e.preventDefault();
-            $("audioPlayer")[0].src = this;
-            });
+            $("#audioPlayer")[0].src = this;
+            $("#audioPlayer")[0].play();
+             });
         }
     </script>
 </body>
