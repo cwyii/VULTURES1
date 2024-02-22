@@ -11,7 +11,7 @@
                 $(this).parent().addClass("current-song");
             });
                 
-        $("#audioPlayer")[0].addEventListener("ended", function(){
+        $("#audioPlayer")[0].addEventListener("ended", function(e){
                currentSong++;
                 if(currentSong == $("#playlist li a").length)
                     currentSong = 0;
