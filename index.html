@@ -99,6 +99,14 @@ float:center;
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
     <script>
         audioPlayer();
+        function audioPlayer(){
+          $("#audioPlayer")[0].src = $("#playlist li a")
+          [0];
+          $("#playlist li a").click(function(e){
+            e.preventDefault();
+            $("audioPlayer")[0].src = this;
+            });
+        }
     </script>
 </body>
 </html>
