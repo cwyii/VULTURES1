@@ -10,6 +10,25 @@
                 currentSong = $(this).parent().index();
                 $(this).parent().addClass("current-song");
             });
+
+let playlist = [
+    '01-stars.mp3',
+    '02-key-to-my-life.mp3',
+    '03-paid.mp3',
+    '04-talking.mp3',
+    '05-back-to-me.mp3',
+        '06-hoodrat.mp3',
+        '07-do-it.mp3',
+        '08-paperwork.mp3',
+        '09-burn.mp3',
+        '10-fuk0-sumn.mp3',
+        '11-vultures.mp3',
+        '12-carinval.mp3',
+        '13-beg-forgiveness.mp3',
+        '14-good-(don't-die).mp3',
+        '15-problematic.mp3',
+        '16-king.mp3',
+];
                 
         $("#audioPlayer")[0].addEventListener("ended", function(){
                currentSong++;
