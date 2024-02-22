@@ -10,15 +10,14 @@
                 currentSong = $(this).parent().index();
                 $(this).parent().addClass("current-song");
             });
-            
-          audio[0].addEventListener('ended',function(e){
-    if(current == len){
-        current = 0;
-        link = playlist.find('a')[0];
-    }else{
-        link = playlist.find('a')[current];    
-        current++;
-    }
-    run($(link),audio[0]);
-});
+                
+        $("#audioPlayer")[0].addEventListener("ended", function(){
+               currentSong++;
+                if(currentSong == $("#playlist li a").length)
+                    currentSong = 0;
+                $("#playlist li").removeClass("current-song");
+                $("#playlist li:eq("+currentSong+")").addClass("current-song");
+                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].play();
+            });
         }
