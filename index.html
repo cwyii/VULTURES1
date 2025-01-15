@@ -2,213 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  <meta name="title" content="VULTURES">
-<meta property="og:image" content="KANYETY.jpg">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
-    <meta name="viewport" content="width=device-width, maximum-scale:1.0, initial-scale=1.0, user-scalable=no"/>
-<body style="background-color: black;">
-<font color="#faf7f8">
-    <font size="5 px">
-    <font face="-apple-system-headline">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="title" content="VULTURES">
+    <meta property="og:image" content="KANYETY.jpg">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="1080">
     <title>VULTURES</title>
-  <center><div class="alert">
-  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-  <center><br><b>VULTURES2</b><br>OUT NOW<br><b>VULTURES3</b><br>NOCURRENTDATE<br></center>
-</div></center>
-        <hr>
-        <center><img src="VULTURESWORLD.jpg"class="image2"/>
-        <img src="VULTURES.jpg"class="image1"/>
-<p class="style1"><center><h2 style+"font: #faf7f8;"><font face = "-apple-system-headline" size = "4.5"><b><strong>KANYE WEST, TY DOLLA $IGN</strong></b></font><br /></h2></center></p>
-<div>
-<img class="image2" src="front-cover.png"></center>
-</div>
-     <style>
-        #playlist{
-            list-style: none;
+    <style>
+        body {
+            background-color: black;
+            color: #faf7f8;
+            font-family: -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centers all text-based content */
         }
-        #playlist li a{
-            color:#f2f2f2;
+
+        /* Styling for the alert box */
+        .alert {
+            padding: 20px;
+            background-color: #080807;
+            color: #e8203e;
+            margin-bottom: 15px;
+        }
+
+        .closebtn {
+            color: #f2f2f2;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Image styling */
+        img {
+            max-width: 100%; /* Makes images responsive */
+            height: auto; /* Maintains aspect ratio */
+            margin: 20px 0; /* Adds spacing between images */
+        }
+
+        /* HR styling */
+        hr {
+            width: 80%;
+            height: 2px;
+            background-color: #080807;
+            border: none;
+            margin: 20px auto;
+        }
+
+        /* Playlist styles */
+        #playlist {
+            list-style: none;
+            padding: 0;
+        }
+
+        #playlist li {
+            margin: 5px 0;
+        }
+
+        #playlist li a {
+            color: #faf7f8;
             text-decoration: none;
         }
-        #playlist .current-song a{
-            color:#e8203e;
-        }
-        
-        hr {
-            position: relative;
-            top: 20px;
-            border: none;
-            height: 25px;
-            background: #080807;
-            margin-bottom: 50px;
-            hr {
-    width: 80%;
-    margin: 20px auto;
-    border: none;
-    height: 2px; 
-    background-color: #080807;
-}
-          .style1 {
-font-size: 10px;
-margin-bottom: -50px;
-background: black;
-}
-.image1 {
-width: 350px;
-height: 60px;
-float:center;
-}
-        .image2 {
-            width: 300px;
-            height: 300px;
-            float:center;
-        }
-.image3 {
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    height: 300px;
-}
-.image4 {
-  width: 100px;
-  height: 100px;
-  float:center;
-}
-.center-content {
-    display: flex;
-    flex-direction: column; ally
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-}
-.centered-hr {
-    width: 80%;
-    margin: 20px auto;
-    border: none;
-    height: 2px;
-    background-color: #080807;
-}
-.centered-image {
-    display: block; /* Block-level for consistent behavior */
-    margin: 20px auto; /* Centers the image horizontally */
-    max-width: 300px; /* Optional: Restrict size */
-    height: auto; /* Maintain aspect ratio */
-}
-.alert {
-  padding: 20px;
-  background-color: #080807;
-  color: #e8203e;
-  margin-bottom: 15px;
-  font-family: -apple-system-headline;
-}
 
-.closebtn {
-  margin-left: 15px;
-  color: #f2f2f2;
-  font-weight: bold;
-  float: right;
-  font-size: 18px;
-  line-height: 20px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.closebtn:hover {
-  color: #e8203e;
-}
-      </style>
+        #playlist .current-song a {
+            color: #e8203e;
+        }
+    </style>
 </head>
 <body>
-<center><hr>
-<audio src="" controls hidden id="audioPlayer"></audio>
-</audio></center>
+    <!-- Alert Box -->
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <b>VULTURES2</b><br>OUT NOW<br><b>VULTURES3</b><br>NOCURRENTDATE
+    </div>
+
+    <!-- Images and Playlist -->
+    <hr>
+    <img src="VULTURESWORLD.jpg" alt="Vultures World">
+    <img src="VULTURES.jpg" alt="Vultures">
+    <hr>
+
+    <img src="front-cover.png" alt="Front Cover">
+    <hr>
+
     <ul id="playlist">
-<li><a href="01-stars.mp3"><b>Stars</b></a></li>
-<li><a href="02-keys-to-my-life.mp3"><b>Keys to My Life</b></a></li>
-<li><a href="03-paid.mp3"><b>Paid</b></a></li>
-<li><a href="04-talking.mp3"><b>Talking / Once Again</b></a></li>
-<li><a href="05-back-to-me.mp3"><b>Back to Me</b></a></li>
-<li><a href="06-hoodrat.mp3"><b>Hoodrat</b></a></li>
-<li><a href="07-do-it.mp3"><b>Do It</b></a></li>
-<li><a href="08-paperwork.mp3"><b>Paperwork</b></a></li>
-<li><a href="09-burn.mp3"><b>Burn</b></a></li>
-<li><a href="10-fuk-sumn.mp3"><b>Fuk Sumn</b></a></li>
-<li><a href="11-vultures.mp3"><b>Vultures</b></a></li>
-<li><a href="12-carnival.mp3"><b>Carnival</b></a></li>
-<li><a href="13-beg-forgiveness.mp3"><b>Beg Forgiveness</b></a></li>
-<li><a href="14-good-dont-die.mp3"><b>Good (Don't Die)</b></a></li>
-<li><a href="15-problematic.mp3"><b>Problematic</b></a></li>
-<li><a href="16-king.mp3"><b>King</b></a></li>
-<hr>
-<div style="text-align: center;">
-    <img class="image3" src="front-cover2.jpeg" alt="Front Cover">
-</div>
-<hr>
-<li><a href="01-slide.mp3"><b>Slide</b></a></li>
-<li><a href="02-time-moving-slow.mp3"><b>Time Moving Slow</b></a></li>
-<li><a href="03-field-trip.mp3"><b>Field Trip</b></a></li>
-<li><a href="04-fried.mp3"><b>Fried</b></a></li>
-<li><a href="05-isabella.mp3"><b>Isabella</b></a></li>
-<li><a href="06-promotion.mp3"><b>Promotion</b></a></li>
-<li><a href="07-husband.mp3"><b>Husband</b></a></li>
-<li><a href="08-lifestyle.mp3"><b>Lifestyle</b></a></li>
-<li><a href="09-forever.mp3"><b>Forever</b></a></li>
-<li><a href="10-bomb.mp3"><b>Bomb</b></a></li>
-<li><a href="11-river.mp3"><b>River</b></a></li>
-<li><a href="12-530"><b>530</b></a></li>
-<li><a href="13-dead.mp3"><b>Dead</b></a></li>
-<li><a href="14-forever-rolling.mp3"><b>Forever Rolling</b></a></li>
-<li><a href="15-sky-city.mp3"><b>Sky City</b></a></li>
-<li><a href="16-my-soul.mp3"><b>My Soul</b></a></li>
-<li><a href="17-take-off-your-dress.mp3"><b>Take Off Your Dress</b></a></li>
-<li><a href="18-can-u-be.mp3"><b>Can U Be</b></a></li>
+        <li><a href="01-stars.mp3">Stars</a></li>
+        <li><a href="02-keys-to-my-life.mp3">Keys to My Life</a></li>
+        <!-- Add more playlist items here -->
     </ul>
-      <audio controls hidden preload="metadata">
-    <source src="01-stars.mp3" type="audio/mpeg">
-    <source src="02-keys-to-my-life.mp3" type="audio/mpeg">
-    <source src="03-paid.mp3" type="audio/mpeg">
-    <source src="04-talking.mp3" type="audio/mpeg">
-    <source src="05-back-to-me.mp3" type="audio/mpeg">
-    <source src="06-hoodrat.mp3" type="audio/mpeg">
-    <source src="07-do-it.mp3" type="audio/mpeg">
-    <source src="08-paperwork.mp3" type="audio/mpeg">
-    <source src="09-burn.mp3" type="audio/mpeg">
-    <source src="10-fuk-sumn.mp3" type="audio/mpeg">
-    <source src="11-vultures.mp3" type="audio/mpeg">
-    <source src="12-carnival.mp3" type="audio/mpeg">
-    <source src="13-beg-forgiveness.mp3" type="audio/mpeg">
-    <source src="14-good-dont-die.mp3" type="audio/mpeg">
-    <source src="15-problematic.mp3" type="audio/mpeg">
-    <source src="16-king.mp3" type="audio/mpeg">
-    <source src="01-slide.mp3" type="audio/mpeg">
-    <source src="02-time-moving-slow.mp3" type="audio/mpeg">
-    <source src="03-field-trip.mp3" type="audio/mpeg">
-    <source src="04-fried.mp3" type="audio/mpeg">
-    <source src="05-isabella.mp3" type="audio/mpeg">
-    <source src="06-promotion.mp3" type="audio/mpeg">
-    <source src="07-husband.mp3" type="audio/mpeg">
-    <source src="08-lifestyle.mp3" type="audio/mpeg">
-    <source src="09-forever.mp3" type="audio/mpeg">
-    <source src="10-bomb.mp3" type="audio/mpeg">
-    <source src="11-river.mp3" type="audio/mpeg">
-    <source src="12-530.mp3" type="audio/mpeg">
-    <source src="13-dead.mp3" type="audio/mpeg">
-    <source src="14-forever-rolling.mp3" type="audio/mpeg">
-    <source src="15-sky-city.mp3" type="audio/mpeg">
-    <source src="16-my-soul.mp3" type="audio/mpeg">
-    <source src="17-take-off-your-dress.mp3" type="audio/mpeg">
-    <source src="18-can-u-be.mp3" type="audio/mpeg">
-  </audio>
-<hr>
-    <center><img width=200 src="vultures_shield.jpg"/></center>
-<hr>
-    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
-    <script src="audioPlayer.js"></script>
+
+    <hr>
+    <img src="front-cover2.jpeg" alt="Front Cover 2">
+    <hr>
+
+    <ul id="playlist">
+        <li><a href="01-slide.mp3">Slide</a></li>
+        <li><a href="02-time-moving-slow.mp3">Time Moving Slow</a></li>
+        <!-- Add more playlist items here -->
+    </ul>
+
+    <hr>
+    <img src="vultures_shield.jpg" width="200" alt="Vultures Shield">
+    <hr>
+
+    <!-- Audio Player -->
+    <audio id="audioPlayer" controls hidden></audio>
+
     <script>
-        audioPlayer();
+        // Audio Player Script for Seamless Playback
+        document.addEventListener('DOMContentLoaded', () => {
+            const audioPlayer = document.getElementById('audioPlayer');
+            const playlistLinks = document.querySelectorAll('#playlist li a');
+
+            playlistLinks.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    audioPlayer.src = link.href;
+                    audioPlayer.play();
+                });
+            });
+        });
     </script>
 </body>
 </html>
