@@ -76,6 +76,27 @@ float:center;
   height: 100px;
   float:center;
 }
+.center-content {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* For any text inside */
+    margin: 0 auto; /* Centers the container itself */
+    width: 100%; /* Optional: Adjust as needed */
+}
+.centered-hr {
+    width: 80%; /* Adjust width */
+    margin: 20px auto; /* Horizontal and vertical centering */
+    border: none;
+    height: 2px;
+    background-color: #080807; /* Dark color */
+}
+.centered-image {
+    display: block; /* Block-level for consistent behavior */
+    margin: 20px auto; /* Centers the image horizontally */
+    max-width: 300px; /* Optional: Restrict size */
+    height: auto; /* Maintain aspect ratio */
+}
 .alert {
   padding: 20px;
   background-color: #080807;
