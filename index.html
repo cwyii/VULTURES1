@@ -90,11 +90,12 @@
         #playlist li a {
             color: #faf7f8;
             text-decoration: none;
-            text-transform: uppercase; /* Forces titles to be uppercase */
+            text-transform: uppercase; /* Forces titles to uppercase */
+            font-weight: bold; /* Makes titles bold */
         }
 
         #playlist .current-song a {
-            color: #e8203e;
+            color: #e8203e; /* Highlights the current song in red */
         }
     </style>
 </head>
@@ -175,6 +176,8 @@
             const playNextSong = () => {
                 currentSongIndex++;
                 if (currentSongIndex < playlistLinks.length) {
+                    playlistLinks[currentSongIndex].parentElement.classList.add('current-song');
+                    playlistLinks[currentSongIndex - 1].parentElement.classList.remove('current-song');
                     audioPlayer.src = playlistLinks[currentSongIndex].href;
                     audioPlayer.play();
                 }
@@ -183,7 +186,9 @@
             playlistLinks.forEach((link, index) => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
+                    playlistLinks[currentSongIndex].parentElement.classList.remove('current-song');
                     currentSongIndex = index;
+                    link.parentElement.classList.add('current-song');
                     audioPlayer.src = link.href;
                     audioPlayer.play();
                 });
