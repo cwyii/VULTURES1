@@ -182,35 +182,46 @@
     <!-- Audio Player -->
     <audio id="audioPlayer" controls hidden></audio>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const audioPlayer = document.getElementById('audioPlayer');
-            const playlistLinks = document.querySelectorAll('#playlist li a');
-            let currentSongIndex = 0;
+   <script>
+document.addEventListener('DOMContentLoaded', () => {
 
-            const playNextSong = () => {
-                currentSongIndex++;
-                if (currentSongIndex < playlistLinks.length) {
-                    playlistLinks[currentSongIndex].parentElement.classList.add('current-song');
-                    playlistLinks[currentSongIndex - 1].parentElement.classList.remove('current-song');
-                    audioPlayer.src = playlistLinks[currentSongIndex].href;
-                    audioPlayer.play();
-                }
-            };
+    const audioPlayer = document.getElementById('audioPlayer');
 
-            playlistLinks.forEach((link, index) => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    playlistLinks[currentSongIndex].parentElement.classList.remove('current-song');
-                    currentSongIndex = index;
-                    link.parentElement.classList.add('current-song');
-                    audioPlayer.src = link.href;
-                    audioPlayer.play();
-                });
-            });
+    // Select ALL playlist links (from both playlists)
+    const playlistLinks = document.querySelectorAll('#playlist li a');
 
-            audioPlayer.addEventListener('ended', playNextSong);
+    let currentSongIndex = 0;
+
+    const playSong = (index) => {
+        playlistLinks.forEach(link => {
+            link.parentElement.classList.remove('current-song');
         });
-    </script>
+
+        currentSongIndex = index;
+        playlistLinks[currentSongIndex].parentElement.classList.add('current-song');
+
+        audioPlayer.src = playlistLinks[currentSongIndex].getAttribute("href");
+        audioPlayer.play();
+    };
+
+    playlistLinks.forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            playSong(index);
+        });
+    });
+
+    audioPlayer.addEventListener('ended', () => {
+        currentSongIndex++;
+
+        if (currentSongIndex >= playlistLinks.length) {
+            currentSongIndex = 0;
+        }
+
+        playSong(currentSongIndex);
+    });
+
+});
+</script>
 </body>
 </html>
