@@ -182,13 +182,11 @@
     <!-- Audio Player -->
     <audio id="audioPlayer" controls hidden></audio>
 
-   <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
 
     const audioPlayer = document.getElementById('audioPlayer');
-
-    // Select ALL playlist links (from both playlists)
-    const playlistLinks = document.querySelectorAll('#playlist li a');
+    const playlistLinks = document.querySelectorAll('ul[id="playlist"] li a');
 
     let currentSongIndex = 0;
 
